@@ -1,0 +1,236 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    background: #fff;
+    overflow: hidden;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+/* .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} */
+
+.mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000;
+    opacity: .7;
+}
+
+.caidai {
+    position: absolute;
+    top: -6.813333rem;
+    left: calc(50% - 2.906667rem);
+    width: 5.68rem;
+    height: 6.813333rem;
+    z-index: 99;
+    animation: down 2s linear forwards;
+}
+
+@keyframes down {
+    0% {
+        transform: scale(1);
+        top: -6.813333rem;
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    55% {
+        transform: scale(1.3);
+        top: 1rem;
+        opacity: 1;
+    }
+    70%,
+    80%,
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.7);
+        top: 8.893333rem;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.content {
+    position: absolute;
+    top: calc(50% - 8.893333rem);
+    left: calc(50% - 5rem);
+    width: 10rem;
+    height: 17.786667rem;
+    /* background-color: rosybrown; */
+}
+
+.logo {
+    position: absolute;
+    top: 0.546667rem;
+    left: 0.746667rem;
+    width: 1.066666rem;
+    height: 1.066667rem;
+}
+
+.guang {
+    position: absolute;
+    top: 1.6rem;
+    width: 10rem;
+    height: 10rem;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.hb1 {
+    position: absolute;
+    top: 2.32rem;
+    left: calc(50% - 4.813333rem);
+    width: 9.626667rem;
+    height: 11.226667rem;
+}
+
+.open2 {
+    position: absolute;
+    top: 2.32rem;
+    left: calc(50% - 4.813333rem);
+    translate: .5s;
+    animation: openCard2 .5s linear forwards;
+}
+
+@keyframes openCard2 {
+    0% {
+        transform: scale(1.1) rotateY(0);
+    }
+    50% {
+        transform: scale(1.1) rotateY(90deg);
+    }
+    100% {
+        position: absolute;
+        top: 2.32rem;
+        left: calc(50% - 4.813333rem);
+        transform: scale(1);
+    }
+}
+
+.circle {
+    position: absolute;
+    top: 5.826667rem;
+    left: calc(50% - 1.226667rem);
+    width: 2.453333rem;
+    height: 2.626667rem;
+    animation: beat1 .5s alternate linear infinite;
+}
+
+.hb2 {
+    position: absolute;
+    top: 2.96rem;
+    left: calc(50% - 3.573333rem);
+    width: 7.146667rem;
+    height: 10.573333rem;
+}
+
+.zi {
+    position: absolute;
+    top: 8.44rem;
+    left: calc(50% - 2.226667rem);
+    width: 4.453333rem;
+    height: 0.386667rem;
+}
+
+@keyframes swing {
+    20% {
+        transform: rotate3d(0, 0, 1, 10deg);
+    }
+    40% {
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+    50% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+    60% {
+        transform: scale(1);
+        /* transform: rotate3d(0, 0, 1, 5deg); */
+    }
+    80% {
+        transform: scale(1.5);
+        /* transform: rotate3d(0, 0, 1, -5deg); */
+    }
+    to {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+.money {
+    position: absolute;
+    top: 8.44rem;
+    left: 5.613333rem;
+    width: 1.186667rem;
+    height: 0.373333rem;
+    animation: swing 1s alternate linear infinite;
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.btn {
+    position: absolute;
+    top: 11.573333rem;
+    left: calc(50% - 2.213333rem);
+    width: 4.426667rem;
+    height: 1.066667rem;
+    animation: beat1 .5s alternate linear infinite;
+}
+
+@keyframes beat1 {
+    0% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
